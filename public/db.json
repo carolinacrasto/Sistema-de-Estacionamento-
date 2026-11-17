@@ -1,0 +1,204 @@
+{
+  "usuarios": [
+    {
+      "id": 1,
+      "nome": "Carol",
+      "email": "carol@email.com",
+      "senha": "1234J@",
+      "perfil": "ADMIN",
+      "ativo": true
+    },
+    {
+      "id": 2,
+      "nome": "Joao",
+      "email": "joao@email.com",
+      "senha": "1234J@",
+      "perfil": "OPERADOR",
+      "ativo": true
+    },
+    {
+      "id": 3,
+      "nome": "Maria",
+      "email": "maria@email.com",
+      "senha": "1234J@",
+      "perfil": "OPERADOR",
+      "ativo": true
+    }
+  ],
+  "categorias": [
+    {
+      "id": 1,
+      "nome": "Carro",
+      "valorHora": 10,
+      "valorDiaria": 50,
+      "valorPernoite": 70,
+      "vagasTotais": 50,
+      "vagasOcupadas": 10,
+      "ativo": true
+    },
+    {
+      "id": 2,
+      "nome": "Moto",
+      "valorHora": 6,
+      "valorDiaria": 30,
+      "valorPernoite": 45,
+      "vagasTotais": 20,
+      "vagasOcupadas": 5,
+      "ativo": true
+    },
+    {
+      "id": 3,
+      "nome": "Caminhao",
+      "valorHora": 30,
+      "valorDiaria": 100,
+      "valorPernoite": 150,
+      "vagasTotais": 10,
+      "vagasOcupadas": 2,
+      "ativo": true
+    }
+  ],
+  "tickets": [
+    {
+      "id": 1,
+      "placa": "ABC1D23",
+      "categoriaId": 1,
+      "categoria": "Carro",
+      "dataEntrada": "2026-09-24",
+      "horaEntrada": "08:00",
+      "dataSaida": null,
+      "horaSaida": null,
+      "valorTotal": null,
+      "status": "ABERTO"    },
+    {
+      "id": 2,
+      "placa": "DEF4G56",
+      "categoriaId": 2,
+      "categoria": "Moto",
+      "dataEntrada": "2026-09-24",
+      "horaEntrada": "09:30",
+      "dataSaida": null,
+      "horaSaida": null,
+      "valorTotal": null,
+      "status": "ABERTO"
+    },
+    {
+      "id": 3,
+      "placa": "JKL1M23",
+      "categoriaId": 1,
+      "categoria": "Carro",
+      "dataEntrada": "2026-09-23",
+      "horaEntrada": "10:00",
+      "dataSaida": "2026-09-23",
+      "horaSaida": "12:10",
+      "valorTotal": 20,
+      "status": "FINALIZADO"}
+      ],
+  "pagamentos": [
+    {
+      "id": 1,
+      "ticketId": 3,
+      "caixaId": 1,
+      "formaPagamento": "PIX",
+      "valor": 20,
+      "valorRecebido": 20,
+      "troco": 0,
+      "data": "2026-09-23",
+      "hora": "12:10",
+      "status": "PAGO"   },
+    {
+      "id": 2,
+      "ticketId": 1,
+      "caixaId": 1,
+      "formaPagamento": "DINHEIRO",
+      "valor": 30,
+      "valorRecebido": 50,
+      "troco": 20,
+      "data": "2026-09-24",
+      "hora": "11:00",
+      "status": "PAGO"
+    },
+    {
+      "id": 3,
+      "ticketId": 2,
+      "caixaId": 1,
+      "formaPagamento": "CARTAO",
+      "valor": 15,
+      "valorRecebido": 15,
+      "troco": 0,
+      "data": "2026-09-24",
+      "hora": "11:30",
+      "status": "PAGO"    }
+  ],
+  "caixa": [
+    {
+      "id": 1,
+      "usuarioId": 1,
+      "nomeOperador": "Carol",
+      "dataAbertura": "2026-11-03",
+      "horaAbertura": "08:00",
+      "valorInicial": 100.00,
+      "dataFechamento": null,
+      "horaFechamento": null,
+      "valorFinal": null,
+      "status": "ABERTO",
+      "sangrias": [
+        {
+          "id": 1,
+          "valor": 50.00,
+          "justificativa": "Retirada de excesso de espécie para o cofre",
+          "data": "2026-11-03"
+        }
+      ],
+      "reforcos": [
+        {
+          "id": 1,
+          "valor": 30.00,
+          "descricao": "Troco adicional fornecido pelo gerente",
+          "data": "2026-11-03"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "usuarioId": 2,
+      "nomeOperador": "Joao",
+      "dataAbertura": "2026-11-02",
+      "horaAbertura": "07:00",
+      "valorInicial": 80.00,
+      "dataFechamento": "2026-11-02",
+      "horaFechamento": "19:00",
+      "valorFinal": 210.00,
+      "status": "FECHADO",
+      "sangrias": [
+        {
+          "id": 2,
+          "valor": 40.00,
+          "justificativa": "Sangria parcial de segurança",
+          "data": "2026-11-02"
+        }
+      ],
+      "reforcos": []
+    },
+    {
+      "id": 3,
+      "usuarioId": 3,
+      "nomeOperador": "Maria",
+      "dataAbertura": "2026-11-01",
+      "horaAbertura": "13:00",
+      "valorInicial": 50.00,
+      "dataFechamento": "2026-11-01",
+      "horaFechamento": "22:00",
+      "valorFinal": 185.00,
+      "status": "FECHADO",
+      "sangrias": [],
+      "reforcos": [
+        {
+          "id": 2,
+          "valor": 25.00,
+          "descricao": "Reforço de moedas para troco",
+          "data": "2026-11-01"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,163 @@
+{
+  "usuarios": [
+    {
+      "id": 1,
+      "nome": "Carol",
+      "email": "carol@email.com",
+      "senha": "1234J@",
+      "perfil": "ADMIN",
+      "ativo": true
+    },
+    {
+      "id": 2,
+      "nome": "Joao",
+      "email": "joao@email.com",
+      "senha": "1234J@",
+      "perfil": "OPERADOR",
+      "ativo": true
+    },
+    {
+      "id": 3,
+      "nome": "Maria",
+      "email": "maria@email.com",
+      "senha": "1234J@",
+      "perfil": "OPERADOR",
+      "ativo": true
+    }
+  ],
+
+  "categorias": [
+    {
+      "id": 1,
+      "nome": "Carro",
+      "valorHora": 10,
+      "valorDiaria": 50,
+      "valorPernoite": 70,
+      "vagasTotais": 50,
+      "vagasOcupadas": 10,
+      "ativo": true
+    },
+    {
+      "id": 2,
+      "nome": "Moto",
+      "valorHora": 6,
+      "valorDiaria": 30,
+      "valorPernoite": 45,
+      "vagasTotais": 20,
+      "vagasOcupadas": 5,
+      "ativo": true
+    },
+    {
+      "id": 3,
+      "nome": "Caminhao",
+      "valorHora": 30,
+      "valorDiaria": 100,
+      "valorPernoite": 150,
+      "vagasTotais": 10,
+      "vagasOcupadas": 2,
+      "ativo": true
+    }
+  ],
+
+  "tickets": [
+    {
+      "id": 1,
+      "placa": "ABC1D23",
+      "categoriaId": 1,
+      "categoria": "Carro",
+      "dataEntrada": "2026-09-24",
+      "horaEntrada": "08:00",
+      "dataSaida": null,
+      "horaSaida": null,
+      "valorTotal": null,
+      "status": "ABERTO",
+      "operadorEntradaId": 2
+    },
+    {
+      "id": 2,
+      "placa": "DEF4G56",
+      "categoriaId": 2,
+      "categoria": "Moto",
+      "dataEntrada": "2026-09-24",
+      "horaEntrada": "09:30",
+      "dataSaida": null,
+      "horaSaida": null,
+      "valorTotal": null,
+      "status": "ABERTO",
+      "operadorEntradaId": 2
+    },
+    {
+      "id": 3,
+      "placa": "JKL1M23",
+      "categoriaId": 1,
+      "categoria": "Carro",
+      "dataEntrada": "2026-09-23",
+      "horaEntrada": "10:00",
+      "dataSaida": "2026-09-23",
+      "horaSaida": "12:10",
+      "valorTotal": 20,
+      "status": "FINALIZADO",
+      "operadorEntradaId": 2,
+      "operadorSaidaId": 3
+    }
+  ],
+
+  "pagamentos": [
+    {
+      "id": 1,
+      "ticketId": 3,
+      "caixaId": 1,
+      "formaPagamento": "PIX",
+      "valor": 20,
+      "valorRecebido": 20,
+      "troco": 0,
+      "data": "2026-09-23",
+      "hora": "12:10",
+      "status": "PAGO",
+      "operadorId": 3
+    }
+  ],
+
+  "caixas": [
+    {
+      "id": 1,
+      "usuarioId": 2,
+      "dataAbertura": "2026-09-24",
+      "horaAbertura": "07:30",
+      "valorInicial": 100,
+      "dataFechamento": null,
+      "horaFechamento": null,
+      "valorFinal": null,
+      "status": "ABERTO",
+      "movimentacoes": [
+        {
+          "id": 1,
+          "tipo": "ABERTURA",
+          "formaPagamento": "DINHEIRO",
+          "valor": 100,
+          "descricao": "Valor inicial do caixa"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "usuarioId": 3,
+      "dataAbertura": "2026-09-23",
+      "horaAbertura": "07:30",
+      "valorInicial": 100,
+      "dataFechamento": "2026-09-23",
+      "horaFechamento": "22:00",
+      "valorFinal": 1100,
+      "status": "FECHADO",
+      "movimentacoes": [
+        {
+          "id": 1,
+          "tipo": "ENTRADA",
+          "formaPagamento": "PIX",
+          "valor": 20,
+          "descricao": "Pagamento estacionamento"
+        }
+      ]
+    }
+  ]
+}
